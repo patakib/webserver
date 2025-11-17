@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: webserver
-        image: localhost:5001/webserver:latest
+        image: localhost:5001/webserver:v1
         # IfNotPresent is crucial for local registries; it avoids re-pulling if the image exists
         imagePullPolicy: IfNotPresent 
         ports:
@@ -26,3 +26,4 @@ spec:
           limits:
             memory: "128Mi"
             cpu: "500m"
+
