@@ -1,0 +1,14 @@
+# deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webserver-deployment
+spec:
+  # ...
+  template:
+    spec:
+      containers:
+      - name: webserver
+        # Use the local registry address
+        image: localhost:5001/webserver:v1
+        imagePullPolicy: Always # Recommended for local testing
